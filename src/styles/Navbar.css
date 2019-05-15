@@ -1,0 +1,28 @@
+
+
+.nav{
+    background: #019EA3;
+    overflow: hidden;        /*esconder margenes*/
+    height: 140px; /*120*/
+}
+
+.logo img{
+    height: 85px;
+    margin-top: 35px;
+    margin-left: 30px;
+
+}
+
+.options li{
+    list-style: none;  /*quitar los puntos*/
+    display: inline-block; /*Mostrar la barra en horizontal*/
+    margin-top: 60px;
+    margin-left:100px;
+}
+
+.options li  a{ 
+    text-decoration: none; /*Quitarle el subrayado a las palabras de la barra*/
+    color: #350927;
+    font-size: 30px;
+   
+}
