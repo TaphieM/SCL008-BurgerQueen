@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import OrderCheck from '../components/OrderCheck';
 import Menu from '../components/Menu';
 
-class TakeOrder extends React.Component{
+class TakeOrder extends React.Component {
     render(){
         return (
         <div>
@@ -24,7 +24,7 @@ class TakeOrder extends React.Component{
                 </div>
             </div>
         </div>
-        )
+        );
 
         
     }

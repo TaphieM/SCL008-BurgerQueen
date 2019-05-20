@@ -1,18 +1,17 @@
-//punto de entrada a la aplicación, archivo principal
+// punto de entrada a la aplicación, archivo principal
 
 
-import React from 'react';                    //analógo a createElement, para usar JSX SIEMPRE importar react
-import ReactDOM from 'react-dom';            //analógo a appendChild
+import React from 'react';                    // analógo a createElement, para usar JSX SIEMPRE importar react
+import ReactDOM from 'react-dom';            // analógo a appendChild
 import './index.css';
-//import App from './App';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
-import TakeOrder from './pages/TakeOrder'
 import "bootstrap/dist/css/bootstrap.css";
 
 
-//ReactDOM.render (__qué__, __dónde__);
-//ReactDOM.render siempre recibe un elemento por eso se usan </>
-ReactDOM.render(<TakeOrder  />, document.getElementById('root'));  
+// ReactDOM.render (__qué__, __dónde__);
+// ReactDOM.render siempre recibe un elemento por eso se usan </>
+ReactDOM.render(<App  />, document.getElementById('root'));  
 
 
 

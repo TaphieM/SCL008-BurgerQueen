@@ -1,8 +1,7 @@
-import React from 'react';       
-                
+import React from 'react';      
 
 class OrderCheck extends React.Component {
-    render(){
+  render(){
         return(
         <element>
             <h2>Pedido</h2>
@@ -10,9 +9,9 @@ class OrderCheck extends React.Component {
                <label>Nombre</label>
                <input type="text" name="clientName"></input>
            </form>
+           <button>Enviar a cocina</button>
         </element>
-        )
-             
+        )          
     }
                            
 }
