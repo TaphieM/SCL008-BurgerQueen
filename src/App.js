@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import TakeOrder from './pages/TakeOrder';
+import TakeOrder from './components/Views/WaiterView';
 
 function App() {
   return (

@@ -7,38 +7,16 @@ class Button extends React.Component {
   }
 
   handleClick() {
-    this.props.menus();
-    };
+    this.props.options();
+  }
 
+  render() {
+    return (
+      <button type="button" onClick={this.handleClick}>{this.props.name}</button>
 
-render(){
-
-return(
-
-<button type="button" onClick={this.handleClick} >{this.props.options}</button>
-
-)
-};
+    );
+  }
 }
- 
 
 
 export default Button;
-
-
-/* class Square extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        value: null,
-      };
-    }
-  
-    render() {
-      return (
-        <button className="square" onClick={() => alert('click')}>
-          {this.props.value}
-        </button>
-      );
-    }
-  } */

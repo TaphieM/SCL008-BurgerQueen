@@ -1,0 +1,103 @@
+
+    {
+      "breakfastFood": [
+        {
+          "id": 1,
+          "name": "Sandwich de jamón y queso",
+          "price": 1000
+        }],
+      "breakfastDrinks":[
+        {
+          "id": 2,
+          "name": "Café americano",
+          "price": 500
+        },
+        {
+          "id": 3,
+          "name": "Café con leche",
+          "price": 700
+        },
+        {
+          "id": 4,
+          "name": "Jugo natural",
+          "price": 700
+        }
+      ],
+      "lunchFood":[
+        {
+          "id":5,
+          "name": "H. Simple de Pollo",
+          "price": 1500
+        },
+        {
+          "id":6,
+          "name": "H. Doble de Pollo",
+          "price": 2500
+        },
+        {
+          "id":7,
+          "name": "H. Simple de Res",
+          "price": 1500
+        },
+        {
+          "id":8,
+          "name": "H. Doble de Res",
+          "price": 2500
+        },
+        {
+          "id":9,
+          "name": "H. Simple Veggie",
+          "price": 1500
+        },
+        {
+          "id":10,
+          "name": "H. Doble Veggie",
+          "price": 2500
+        },
+        {
+          "id":11,
+          "name": "+Queso",
+          "price": 500
+        },
+        {
+          "id":12,
+          "name": "+Huevo",
+          "price": 500
+        }
+      ],
+      "lunchExtras":[
+        {
+          "id":13,
+          "name": "Papas fritas",
+          "price": 500
+        },
+        {
+          "id":14,
+          "name": "Aros de cebolla",
+          "price": 500
+        }
+      ],
+      "lunchDrinks":[
+        {
+          "id":15,
+          "name": "Agua 500ml",
+          "price": 500
+        },
+        {
+          "id":16,
+          "name": "Agua 700ml",
+          "price": 800
+        },
+        {
+          "id":17,
+          "name": "Gaseosa 500ml",
+          "price": 700
+        },
+        {
+          "id":18,
+          "name": "Gaseosa 750ml",
+          "price": 1000
+        }
+      ]
+
+    }
