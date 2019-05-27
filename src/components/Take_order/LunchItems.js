@@ -16,7 +16,7 @@ class LunchItems extends React.Component {
   hamburgers() {
     const lunchFood = menu.lunchFood.map((Item) => {
       return (
-        <Button name={Item.name} buttonOnClick={() => { this.addItem(Item) }} />
+        <Button className="itembutton" name={Item.name} buttonOnClick={() => { this.addItem(Item) }} />
       );
     });
     return lunchFood;
@@ -25,7 +25,7 @@ class LunchItems extends React.Component {
   accompaniments() {
     const lunchExtras = menu.lunchExtras.map((Item) => {
       return (
-        <Button name={Item.name} buttonOnClick={() => { this.addItem(Item) }} />
+        <Button className="itembutton" name={Item.name} buttonOnClick={() => { this.addItem(Item) }} />
       );
     });
     return lunchExtras;
@@ -34,7 +34,7 @@ class LunchItems extends React.Component {
   drinks() {
     const lunchDrinks = menu.lunchDrinks.map((Item) => {
       return (
-        <Button name={Item.name} buttonOnClick={() => { this.addItem(Item) }} />
+        <Button className="itembutton" name={Item.name} buttonOnClick={() => { this.addItem(Item) }} />
       );
     });
     return lunchDrinks;

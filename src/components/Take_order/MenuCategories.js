@@ -17,8 +17,8 @@ class MenuCategories extends React.Component {
     return (
       <div>
         <div>
-          <Button name="Sandwiches" options={() => this.BreakfastLetter('Sandwiches')} />
-          <Button name="Bebidas" options={() => this.BreakfastLetter('Drinks')} />
+          <Button className="categorybutton" name="Sandwiches" options={() => this.BreakfastLetter('Sandwiches')} />
+          <Button className="categorybutton" name="Bebidas" options={() => this.BreakfastLetter('Drinks')} />
         </div>
         <div id="showBitems" />
       </div>
@@ -29,9 +29,9 @@ class MenuCategories extends React.Component {
     return (
       <div>
         <div>
-          <Button name="Hamburguesas" options={() => this.LunchLetter('Hamburgers')} />
-          <Button name="Acompañamientos" options={() => this.LunchLetter('Accompaniments')} />
-          <Button name="Bebidas" options={() => this.LunchLetter('Drinks')} />
+          <Button className="categorybutton" name="Hamburguesas" options={() => this.LunchLetter('Hamburgers')} />
+          <Button className="categorybutton" name="Acompañamientos" options={() => this.LunchLetter('Accompaniments')} />
+          <Button className="categorybutton" name="Bebidas" options={() => this.LunchLetter('Drinks')} />
         </div>
         <div id="showLitems" />
       </div>
