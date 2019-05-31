@@ -9,9 +9,15 @@ class LunchItems extends React.Component {
     this.addItem = this.addItem.bind(this);
   }
 
-  addItem() {
-    this.props.addtoOrder();
+  addItem = e  => {
+    console.log(e.target);
   }
+//     showOrder: {
+       
+//   //       // [e.target.name]:[e.target.value]
+//   //    },
+//   //  });
+//  };
 
   hamburgers() {
     const lunchFood = menu.lunchFood.map((Item) => {

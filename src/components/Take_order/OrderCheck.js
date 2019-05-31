@@ -28,7 +28,7 @@ class OrderCheck extends React.Component {
         <form>
           <label htmlFor="name">
             Nombre
-            <input className="sendOrder" onChange={this.handleChange} value={this.state.clientName} id="name" name="clientName" type="text" placeholder="Client Name" />
+            <input className="sendOrder" onChange={this.handleChange} value={this.state.clientName} id="name" name="clientName" type="text" placeholder="Nombre del cliente" />
           </label>
         </form>
         <button onClick={this.handleClick} type="button">Enviar a cocina</button>

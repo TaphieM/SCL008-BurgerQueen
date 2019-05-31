@@ -19,7 +19,7 @@ class TakeOrder extends React.Component {
           </div>
           <div className="col-4">
             <article>
-              <OrderCheck />
+              <OrderCheck options={this.addItem} />
             </article>
           </div>
         </div>

@@ -1,6 +1,10 @@
 
-
+body {
+    padding:0px;
+    margin:0px;
+}
 .nav{
+    width: 100%;
     background: #019EA3;
     overflow: hidden;        /*esconder margenes*/
     height: 140px; /*120*/
@@ -26,3 +30,4 @@
     font-size: 30px;
    
 }
+
