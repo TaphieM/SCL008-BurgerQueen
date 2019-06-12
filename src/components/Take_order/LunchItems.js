@@ -1,46 +1,43 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Button from '../Button';
 import menu from '../../data/menu.json';
+import { addItemtoOrder } from '../../actions/waiter';
 
 
 class LunchItems extends React.Component {
   constructor(props) {
     super(props);
-    this.addItem = this.addItem.bind(this);
+    this.add = this.add.bind(this);
   }
 
-  addItem = e  => {
-    console.log(e.target);
-  }
-//     showOrder: {
-       
-//   //       // [e.target.name]:[e.target.value]
-//   //    },
-//   //  });
-//  };
+  add(item) {
+    this.props.add(item)
+   }
+ 
 
   hamburgers() {
-    const lunchFood = menu.lunchFood.map((Item) => {
+    const lunchFood = menu.lunchFood.map((item) => {
       return (
-        <Button className="itembutton" name={Item.name} options={() => { this.addItem(Item) }} />
+        <Button className="itembutton" name={item.name} options={() => { this.add(item); }} />
       );
     });
     return lunchFood;
   }
 
   accompaniments() {
-    const lunchExtras = menu.lunchExtras.map((Item) => {
+    const lunchExtras = menu.lunchExtras.map((item) => {
       return (
-        <Button className="itembutton" name={Item.name} options={() => { this.addItem(Item) }} />
+        <Button className="itembutton" name={item.name} options={() => { this.add(item); }} />
       );
     });
     return lunchExtras;
   }
 
   drinks() {
-    const lunchDrinks = menu.lunchDrinks.map((Item) => {
+    const lunchDrinks = menu.lunchDrinks.map((item) => {
       return (
-        <Button className="itembutton" name={Item.name} options={() => { this.addItem(Item) }} />
+        <Button className="itembutton" name={item.name} options={() => { this.add(item); }} />
       );
     });
     return lunchDrinks;
@@ -57,5 +54,19 @@ class LunchItems extends React.Component {
   }
 }
 
+const mapStateToProps = (state) =>{
+  return {
+    ...state,
+  };
+};
 
-export default LunchItems;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    add : addItemtoOrder(dispatch), 
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(LunchItems);

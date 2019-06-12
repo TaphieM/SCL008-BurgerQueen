@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class OrderCheck extends React.Component {
   state = {
@@ -37,6 +38,12 @@ class OrderCheck extends React.Component {
   }
 }
 
+const mapStateToProps = (state) =>{
+  return {
+    ...state,
+  };
+};
 
-
-export default OrderCheck;
+export default connect(
+  mapStateToProps,
+)(OrderCheck);

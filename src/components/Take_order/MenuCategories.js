@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import { Provider } from 'react-redux';
+import store from '../../store';
 import Button from '../Button';
 import BreakfastItems from './BreakfastItems';
 import LunchItems from './LunchItems';
 
 class MenuCategories extends React.Component {
   BreakfastLetter(category) {
-    ReactDom.render(<BreakfastItems category={category} />, document.getElementById('showBitems'));
+    ReactDom.render(
+    <Provider store={store}><BreakfastItems category={category} /></Provider>, document.getElementById('showBitems'));
   }
 
   LunchLetter(category) {
-    ReactDom.render(<LunchItems category={category} />, document.getElementById('showLitems'));
+    ReactDom.render(<Provider store={store}><LunchItems category={category} /></Provider>, document.getElementById('showLitems'));
   }
 
   breakfast() {

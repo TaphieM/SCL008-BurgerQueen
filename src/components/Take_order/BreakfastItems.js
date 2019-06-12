@@ -1,34 +1,30 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { connect } from 'react-redux';
 import Button from '../Button';
 import menu from '../../data/menu.json';
-import OrderCheck from './OrderCheck';
+import { addItemtoOrder } from '../../actions/waiter';
 
 class BreakfastItems extends React.Component {
   constructor(props) {
     super(props);
-    this.addItem = this.addItem.bind(this);
+    this.add = this.add.bind(this);
   }
- 
-  addItem(item) {
-    ReactDom.render(<OrderCheck  item={item} />, document.getElementById('confirmOrder'));
+
+  add(item) {
+    this.props.add(item)
   }
 
   sandwiches() {
-    const breakfastFood = menu.breakfastFood.map((Item) => {
-      return (
-        <Button className="itembutton" name={Item.name} options={() => { this.addItem(Item) }} />
-      );
-    });
+    const breakfastFood = menu.breakfastFood.map((item) => (
+        <Button className="itembutton" name={item.name} options={() => { this.add(item); }} />
+      ));
     return breakfastFood;
   }
 
   drinks() {
-    const breakfastDrinks = menu.breakfastDrinks.map((Item) => {
-      return (
-        <Button className="itembutton" name={Item.name} options={() => { this.addItem(Item) }} />
-      );
-    });
+    const breakfastDrinks = menu.breakfastDrinks.map((item) => (
+        <Button className="itembutton" name={item.name} options={() => { this.add(item); }} />
+      ));
     return breakfastDrinks;
   }
 
@@ -42,4 +38,15 @@ class BreakfastItems extends React.Component {
   }
 }
 
-export default BreakfastItems;
+const mapStateToProps = (state) => ({
+    ...state,
+  });
+
+const mapDispatchToProps = (dispatch) => ({
+    add : addItemtoOrder(dispatch), 
+  });
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(BreakfastItems);
