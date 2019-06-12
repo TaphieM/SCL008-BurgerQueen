@@ -5,26 +5,29 @@ import menu from '../../data/menu.json';
 import { addItemtoOrder } from '../../actions/waiter';
 
 class BreakfastItems extends React.Component {
-  constructor(props) {
-    super(props);
-    this.add = this.add.bind(this);
+  constructor() {
+    super();
+    this.state = {
+      menu,
+    };
   }
 
-  add(item) {
-    this.props.add(item)
-  }
 
   sandwiches() {
-    const breakfastFood = menu.breakfastFood.map((item) => (
-        <Button className="itembutton" name={item.name} options={() => { this.add(item); }} />
-      ));
+    const breakfastFood = this.state.menu.breakfastFood.map((item) => {
+      return (
+        <Button className="itembutton" name={item.name} options={() => { this.props.add([item]); }} />
+      );
+    });
     return breakfastFood;
   }
 
   drinks() {
-    const breakfastDrinks = menu.breakfastDrinks.map((item) => (
-        <Button className="itembutton" name={item.name} options={() => { this.add(item); }} />
-      ));
+    const breakfastDrinks = this.state.menu.breakfastDrinks.map((item) => {
+      return (
+        <Button className="itembutton" name={item.name} options={() => { this.props.add([item]); }} />
+      );
+    });
     return breakfastDrinks;
   }
 

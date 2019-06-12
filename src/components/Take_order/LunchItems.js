@@ -6,38 +6,35 @@ import { addItemtoOrder } from '../../actions/waiter';
 
 
 class LunchItems extends React.Component {
-  constructor(props) {
-    super(props);
-    this.add = this.add.bind(this);
+  constructor() {
+    super();
+    this.state = {
+      menu,
+    };
   }
 
-  add(item) {
-    this.props.add(item)
-   }
- 
-
   hamburgers() {
-    const lunchFood = menu.lunchFood.map((item) => {
+    const lunchFood = this.state.menu.lunchFood.map((item) => {
       return (
-        <Button className="itembutton" name={item.name} options={() => { this.add(item); }} />
+        <Button className="itembutton" name={item.name} options={() => { this.props.add([item]); }} />
       );
     });
     return lunchFood;
   }
 
   accompaniments() {
-    const lunchExtras = menu.lunchExtras.map((item) => {
+    const lunchExtras = this.state.menu.lunchExtras.map((item) => {
       return (
-        <Button className="itembutton" name={item.name} options={() => { this.add(item); }} />
+        <Button className="itembutton" name={item.name} options={() => { this.props.add([item]); }} />
       );
     });
     return lunchExtras;
   }
 
   drinks() {
-    const lunchDrinks = menu.lunchDrinks.map((item) => {
+    const lunchDrinks = this.state.menu.lunchDrinks.map((item) => {
       return (
-        <Button className="itembutton" name={item.name} options={() => { this.add(item); }} />
+        <Button className="itembutton" name={item.name} options={() => { this.props.add([item]); }} />
       );
     });
     return lunchDrinks;

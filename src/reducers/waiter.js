@@ -10,7 +10,7 @@ export default (
     case addItems:
       return {
         ...state,
-        order: state.order.concat(action.item),
+        order: state.order.concat([action.item]),
       };
     default: return state;
   }
