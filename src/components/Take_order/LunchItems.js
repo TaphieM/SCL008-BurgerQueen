@@ -16,7 +16,7 @@ class LunchItems extends React.Component {
   hamburgers() {
     const lunchFood = this.state.menu.lunchFood.map((item) => {
       return (
-        <Button className="itembutton" name={item.name} options={() => { this.props.add([item]); }} />
+        <Button className="itembutton" name={item.name} options={() => { this.props.add(item); }} />
       );
     });
     return lunchFood;
@@ -25,7 +25,7 @@ class LunchItems extends React.Component {
   accompaniments() {
     const lunchExtras = this.state.menu.lunchExtras.map((item) => {
       return (
-        <Button className="itembutton" name={item.name} options={() => { this.props.add([item]); }} />
+        <Button className="itembutton" name={item.name} options={() => { this.props.add(item); }} />
       );
     });
     return lunchExtras;
@@ -34,7 +34,7 @@ class LunchItems extends React.Component {
   drinks() {
     const lunchDrinks = this.state.menu.lunchDrinks.map((item) => {
       return (
-        <Button className="itembutton" name={item.name} options={() => { this.props.add([item]); }} />
+        <Button className="itembutton" name={item.name} options={() => { this.props.add(item); }} />
       );
     });
     return lunchDrinks;
@@ -51,7 +51,7 @@ class LunchItems extends React.Component {
   }
 }
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
   return {
     ...state,
   };
@@ -59,9 +59,9 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    add: addItemtoOrder(dispatch), 
-  }
-}
+    add: addItemtoOrder(dispatch),
+  };
+};
 
 export default connect(
   mapStateToProps,

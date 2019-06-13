@@ -32,10 +32,10 @@ class OrderCheck extends React.Component {
         <h2>Pedido</h2>
         <Table>
           <tbody>
-            {this.props.order.order.map(item =>
+            {this.props.waiter.order.map(item =>
               <tr>
                 <td>{item.name}</td>
-                <td className="text-right">${item.price}</td>
+                <td className="text-right">${item.price}</td> 
               </tr>
             )}
           </tbody>
@@ -43,7 +43,7 @@ class OrderCheck extends React.Component {
             <tr>
               <td colSpan="4">
                 Total: $
-                {this.props.order.order.reduce((sum, item) => sum + item.price, 0)}
+                {this.props.waiter.order.reduce((sum, item) => sum + item.price, 0)}
               </td>
             </tr>
           </tfoot>

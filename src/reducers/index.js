@@ -5,9 +5,9 @@
 
 import { combineReducers } from 'redux';
 // import kitchen from './kitchen';
-import order from './waiter';
+import waiter from './waiter';
 
 export default combineReducers({
   // kitchen,
-  order,
+  waiter,
 });
