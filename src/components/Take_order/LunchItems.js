@@ -59,7 +59,7 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    add : addItemtoOrder(dispatch), 
+    add: addItemtoOrder(dispatch), 
   }
 }
 

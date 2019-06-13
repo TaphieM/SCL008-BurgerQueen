@@ -4,10 +4,10 @@
 // two parameters: the current state and an action
 
 import { combineReducers } from 'redux';
-import kitchen from './kitchen';
-import waiter from './waiter';
+// import kitchen from './kitchen';
+import order from './waiter';
 
 export default combineReducers({
-  kitchen,
-  waiter,
+  // kitchen,
+  order,
 });
