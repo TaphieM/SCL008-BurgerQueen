@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Table } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { deleteItemtoOrder } from '../../actions/waiter';
 
 
 class OrderCheck extends React.Component {
@@ -21,10 +24,14 @@ class OrderCheck extends React.Component {
     //  })
   // };
   
-   handleClick = e => {
+   handleClick = (name) => {
      console.log("Button was clicked");
      console.log(this.state);  
    };
+
+   handleDelete = (item) => {
+     this.props.delete(item);
+   }
 
    render() {
      return (
@@ -35,7 +42,8 @@ class OrderCheck extends React.Component {
             {this.props.waiter.order.map(item =>
               <tr>
                 <td>{item.name}</td>
-                <td className="text-right">${item.price}</td> 
+                <td className="text-right">${item.price}</td>
+                <td className="text-right"><button onClick={() => this.handleDelete(item)}><FontAwesomeIcon icon={faTimes}/></button></td> 
               </tr>
             )}
           </tbody>
@@ -66,6 +74,13 @@ const mapStateToProps = (state) => {
   };
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    delete: deleteItemtoOrder(dispatch),
+  };
+};
+
 export default connect(
   mapStateToProps,
+  mapDispatchToProps,
 )(OrderCheck);

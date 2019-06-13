@@ -1,4 +1,4 @@
-import { addItems } from '../actions/actionTypes';
+import { addItems, deleteItems } from '../actions/actionTypes';
 
 export default (
   state = {
@@ -11,6 +11,11 @@ export default (
       return {
         ...state,
         order: state.order.concat([action.item]),
+      };
+    case deleteItems:
+      return {
+        ...state,
+        order: state.order.filter(item => item.name != [action.item.name])
       };
     default: return state;
   }

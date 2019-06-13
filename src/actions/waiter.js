@@ -13,8 +13,9 @@ export const addItemtoOrder = dispatch => (item) => {
   });
 };
 
-export const deleteItemtoOrder = dispatch => () => {
+export const deleteItemtoOrder = dispatch => (item) => {
   dispatch({
     type: deleteItems,
+    item,
   });
 };
