@@ -15,7 +15,7 @@ export default (
     case deleteItems:
       return {
         ...state,
-        order: state.order.filter(item => item.name != [action.item.name])
+        order: state.order.filter(item => item.name !== [action.item.name])
       };
     default: return state;
   }
