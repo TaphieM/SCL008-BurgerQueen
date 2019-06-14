@@ -2,8 +2,10 @@
 
 
 import addItemtoOrder from './waiter';
+import deleteItemtoOrder from './waiter';
 
 
 export default {
   addItemtoOrder,
+  deleteItemtoOrder,
 };

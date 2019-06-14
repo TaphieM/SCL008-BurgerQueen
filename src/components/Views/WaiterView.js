@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar';
 import OrderCheck from '../Take_order/OrderCheck';
 import MenuOptions from '../Take_order/MenuOptions';
+import { Col } from 'react-bootstrap';
 
 class TakeOrder extends React.Component {
   render() {
@@ -12,16 +13,16 @@ class TakeOrder extends React.Component {
         </article>
 
         <div className="row">
-          <div className="col-8">
+          <Col md={8}>
             <article>
               <MenuOptions />
             </article>
-          </div>
-          <div className="col-4">
+          </Col>
+          <Col md={4}>
             <article>
               <OrderCheck options={this.addItem} />
             </article>
-          </div>
+          </Col>
         </div>
       </div>
     );
